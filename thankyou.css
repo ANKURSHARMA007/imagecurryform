@@ -1,0 +1,18 @@
+body {
+    background-image: linear-gradient(to left, #42275a, #734b6d);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thank-you-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    color: #fff;
+    font-weight: bold;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            document.getElementById('register').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // Call the function to store the form data in LocalStorage
+              storeFormData();
+            });
+          </script>
+        <title>
+            Registration Form 
+        </title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <div class = "main">
+            <div
+                class = "register">
+                <h2>Register Here</h2>
+                <form id = "register" method = "post" action="submit.php">
+                    <label> Name :</label>
+                    <br>
+                    <input type="text" name="fname" id="name" placeholder="Enter your Full name">
+                    <br><br>
+                    <label> Address :</label>
+                    <br>
+                    <input type="text" name="add" id="address" placeholder="Enter your address">
+                    <br><br>
+                    <label> Contact:</label>
+                    <br>
+                    <input type="number" name="cont" id="Contact" placeholder="Enter your Mobile number ">
+                    <br><br>
+                    <label> Email :</label>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="Enter your Email"> 
+                    <br><br>
+                    <label> Desination:</label>
+                    <br>
+                    <input type="text" name="des" id="desination" placeholder="Enter your designation">
+                    <br><br>
+                    <label> Gender:</label>
+                    <br>
+                    <input type="checkbox" name="cont" id="male" placeholder=" ">
+                    <span id="male"> Male</span>
+                    <input type="checkbox" name="cont" id="Female" placeholder=" ">
+                    <span id="male"> Female</span>
+                    <input type="checkbox" name="cont" id="other" placeholder=" ">
+                    <span id="male"> Other</span>
+                    <br><br>
+                    <input type="submit" value="Submit" id="submit" name="submit">
+
+
+
+                </form>
+
+          
+            </div>
+            </div>
+        </div>
+        <script src="store-form-data.js"></script>
+        <script>
+                    
+          document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('register');
+            form.addEventListener('submit', function(event) {
+              event.preventDefault();
+              storeFormData();
+              // You can add your form submission logic here
+              setTimeout(function() {
+                location.href = 'thankyou.html'; // Replace with your thank you page URL
+              }, 3000); // Wait for 3 seconds to redirect
+            });
+          });
+        </script>
+    </body>
+</html>
